@@ -16,18 +16,17 @@ class ElementCell: UITableViewCell {
     
     var element: Element?
     
-    func getNumber(for element: Element) -> Int {
-        let string = element.number.description
+    func getNumber(for element: Element) -> String {
         var numberString = String()
         
-        if string.count == 1 {
-            numberString = "00\(string)"
-        } else if string.count == 2 {
-            numberString = "0\(string)"
-        } else {
-            numberString = "\(string)"
+        if element.number.description.count == 1 {
+            numberString = "00\(element.number)"
+        } else if element.number.description.count < 100 {
+            numberString = "0\(element.number)"
+        } else if element.number.description.count == 100 {
+            numberString = "\(element.number)"
         }
-        return Int(numberString) ?? 001
+        return numberString
     }
     
     func configureCell(for element: Element) {
@@ -35,8 +34,9 @@ class ElementCell: UITableViewCell {
         elementDetails.text = "\(element.symbol) (\(element.number)) \(element.atomicMass)"
         
         let elementNumber = getNumber(for: element)
+        print(elementNumber)
         
-        elementImage.getImage(with: "http://www.theodoregray.com/periodictable/Tiles/\(elementNumber)/s7.JP") { [weak self] (result) in
+        elementImage.getImage(with: "http://www.theodoregray.com/periodictable/Tiles/\(elementNumber)/s7.JPG") { [weak self] (result) in
             switch result {
             case .failure:
                 DispatchQueue.main.async {
