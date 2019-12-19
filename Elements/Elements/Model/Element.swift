@@ -9,7 +9,6 @@
 import Foundation
 
 struct Element: Codable {
-    //let id: Int?
     let name: String
     let atomicMass: Double?
     let boilingPoint: Double?
@@ -20,7 +19,6 @@ struct Element: Codable {
     let favoritedBy: String?
     
     private enum CodingKeys: String, CodingKey {
-        //case id
         case name
         case atomicMass = "atomic_mass"
         case boilingPoint = "boil"

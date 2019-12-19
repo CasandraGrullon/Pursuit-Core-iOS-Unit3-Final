@@ -32,10 +32,10 @@ class ElementDetailVC: UIViewController {
         navigationItem.title = element.name
         symbolLabel.text = element.symbol
         numberLabel.text = element.number.description
-        atomicMassLabel.text = "atomic mass: \(element.atomicMass)"
-        meltingPointLabel.text = "melting point: \(element.meltingPoint ?? 0.0)"
-        boilingPointLabel.text = "boiling point: \(element.boilingPoint ?? 0.0)"
-        discoveredByLabel.text = "discovered by: \(element.discoveredBy ?? "")"
+        atomicMassLabel.text = "\(element.atomicMass ?? 0.0)"
+        meltingPointLabel.text = "\(element.meltingPoint ?? 0.0)"
+        boilingPointLabel.text = "\(element.boilingPoint ?? 0.0)"
+        discoveredByLabel.text = "\(element.discoveredBy ?? "unknown")"
         
         elementImage.getImage(with: "http://images-of-elements.com/\(element.name.lowercased()).jpg") { [weak self] (result) in
             switch result {
