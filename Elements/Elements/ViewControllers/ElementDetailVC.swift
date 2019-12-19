@@ -49,8 +49,29 @@ class ElementDetailVC: UIViewController {
                 }
             }
         }
-        
-        
     }
+    
+    @IBAction func addToFaves(_ sender: UIBarButtonItem) {
+        guard let element = element else {
+            return
+        }
+        //let randomNumber = Int.random(in: 1...100)
+        
+        let favorite = Element(name: element.name, atomicMass: element.atomicMass, boilingPoint: element.boilingPoint, meltingPoint: element.meltingPoint, discoveredBy: element.discoveredBy, number: element.number, symbol: element.symbol, favoritedBy: "Casandra")
+        
+        ElementsAPIClient.postFaves(favorite: favorite) { [weak self] (result) in
+            switch result {
+            case .failure:
+                DispatchQueue.main.async {
+                    self?.showAlert(title: "App Error", message: "could not add to favorites at this time")
+                }
+            case .success:
+                DispatchQueue.main.async {
+                    self?.showAlert(title: "♥️", message: "element was added to your favorites!")
+                }
+            }
+        }
+    }
+    
     
 }
