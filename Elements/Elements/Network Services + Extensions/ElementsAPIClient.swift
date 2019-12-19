@@ -84,7 +84,5 @@ struct ElementsAPIClient {
         } catch {
             completion(.failure(.encodingError(error)))
         }
-        
-        
     }
 }

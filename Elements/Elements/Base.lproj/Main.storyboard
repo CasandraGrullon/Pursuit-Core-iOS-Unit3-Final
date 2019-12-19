@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eMl-dZ-MT1">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -59,6 +58,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="elementDetails" destination="OOi-ha-zzT" id="XQj-Z3-qG2"/>
+                                            <outlet property="elementImage" destination="KwO-n2-HYj" id="QAM-Oa-Pay"/>
+                                            <outlet property="elementName" destination="iBL-pC-vzF" id="VBY-tn-w4h"/>
                                             <segue destination="3bK-g7-YJU" kind="show" id="uw8-1h-0RC"/>
                                         </connections>
                                     </tableViewCell>
@@ -75,6 +77,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="eKF-Ef-NeM"/>
+                    <connections>
+                        <outlet property="tableView" destination="fSh-dv-ADD" id="VAX-J0-2Xh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -167,7 +172,7 @@
         <scene sceneID="b6g-Kr-7Uh">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="b1Y-5v-RuR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Elements" image="table" catalog="system" id="Yf7-9J-nmY"/>
+                    <tabBarItem key="tabBarItem" title="Elements" image="square.grid.3x2.fill" catalog="system" id="Yf7-9J-nmY"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AEX-dS-24m">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -260,6 +265,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="eMl-dZ-MT1" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EUG-5d-nLy">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -294,9 +300,9 @@
     </scenes>
     <resources>
         <image name="heart.fill" catalog="system" width="64" height="54"/>
-        <image name="table" catalog="system" width="64" height="46"/>
+        <image name="square.grid.3x2.fill" catalog="system" width="64" height="40"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Hqu-5a-QPn"/>
+        <segue reference="uw8-1h-0RC"/>
     </inferredMetricsTieBreakers>
 </document>
