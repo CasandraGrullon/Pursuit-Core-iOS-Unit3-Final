@@ -23,6 +23,7 @@ class TableOfElementsController: UIViewController {
     super.viewDidLoad()
     loadData()
     tableView.dataSource = self
+    tableView.delegate = self
   }
     func loadData() {
         ElementsAPIClient.getElements { [weak self] (result) in
@@ -56,5 +57,10 @@ extension TableOfElementsController: UITableViewDataSource {
         cell.configureCell(for: element)
         
         return cell
+    }
+}
+extension TableOfElementsController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150
     }
 }

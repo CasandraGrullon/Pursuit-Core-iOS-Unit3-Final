@@ -16,17 +16,18 @@ class ElementCell: UITableViewCell {
     
     var element: Element?
     
-    func getNumber(for element: Element) -> String {
-       var elementNumber = String()
+    func getNumber(for element: Element) -> Int {
+        let string = element.number.description
+        var numberString = String()
         
-        if element.number < 10 {
-            elementNumber = "00\(element.number)"
-        } else if element.number < 100 {
-            elementNumber = "0\(element.number)"
+        if string.count == 1 {
+            numberString = "00\(string)"
+        } else if string.count == 2 {
+            numberString = "0\(string)"
         } else {
-            elementNumber = "\(element.number)"
+            numberString = "\(string)"
         }
-        return elementNumber
+        return Int(numberString) ?? 001
     }
     
     func configureCell(for element: Element) {

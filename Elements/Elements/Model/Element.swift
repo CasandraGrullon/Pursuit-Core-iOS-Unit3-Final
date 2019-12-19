@@ -12,9 +12,9 @@ struct Element: Codable {
     let id: Int?
     let name: String
     let atomicMass: Double
-    let boilingPoint: Double
-    let meltingPoint: Double
-    let discoveredBy: String
+    let boilingPoint: Double?
+    let meltingPoint: Double?
+    let discoveredBy: String?
     let number: Int
     let symbol: String
     
