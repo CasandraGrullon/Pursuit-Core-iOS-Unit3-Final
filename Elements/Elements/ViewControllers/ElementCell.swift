@@ -34,7 +34,6 @@ class ElementCell: UITableViewCell {
         elementDetails.text = "\(element.symbol) (\(element.number)) \(element.atomicMass)"
         
         let elementNumber = getNumber(for: element)
-        print(elementNumber)
         
         elementImage.getImage(with: "http://www.theodoregray.com/periodictable/Tiles/\(elementNumber)/s7.JPG") { [weak self] (result) in
             switch result {
