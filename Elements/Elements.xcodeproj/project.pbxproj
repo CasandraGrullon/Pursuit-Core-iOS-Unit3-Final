@@ -12,6 +12,9 @@
 		5734756721DA90C700FB6177 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5734756521DA90C700FB6177 /* Main.storyboard */; };
 		5734756921DA90C800FB6177 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5734756821DA90C800FB6177 /* Assets.xcassets */; };
 		5734756C21DA90C800FB6177 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5734756A21DA90C800FB6177 /* LaunchScreen.storyboard */; };
+		C61A237D23ABD49D00F59AF6 /* ShowAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61A237C23ABD49D00F59AF6 /* ShowAlert.swift */; };
+		C61A237F23ABD4EC00F59AF6 /* ElementsAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61A237E23ABD4EC00F59AF6 /* ElementsAPIClient.swift */; };
+		C672EF9C23ABD3E8006F7A9B /* ImageViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C672EF9B23ABD3E8006F7A9B /* ImageViewExt.swift */; };
 		C6DDA69823ABCEA800F37B9B /* ElementDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DDA69723ABCEA800F37B9B /* ElementDetailVC.swift */; };
 		C6DDA69A23ABCECD00F37B9B /* ElementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DDA69923ABCECD00F37B9B /* ElementCell.swift */; };
 		C6DDA69E23ABCF7A00F37B9B /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DDA69D23ABCF7A00F37B9B /* Element.swift */; };
@@ -29,6 +32,9 @@
 		5734756821DA90C800FB6177 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5734756B21DA90C800FB6177 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5734756D21DA90C800FB6177 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C61A237C23ABD49D00F59AF6 /* ShowAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAlert.swift; sourceTree = "<group>"; };
+		C61A237E23ABD4EC00F59AF6 /* ElementsAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementsAPIClient.swift; sourceTree = "<group>"; };
+		C672EF9B23ABD3E8006F7A9B /* ImageViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewExt.swift; sourceTree = "<group>"; };
 		C6DDA69723ABCEA800F37B9B /* ElementDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementDetailVC.swift; sourceTree = "<group>"; };
 		C6DDA69923ABCECD00F37B9B /* ElementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementCell.swift; sourceTree = "<group>"; };
 		C6DDA69D23ABCF7A00F37B9B /* Element.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Element.swift; sourceTree = "<group>"; };
@@ -113,6 +119,9 @@
 			children = (
 				C6DDA6A423ABD2E500F37B9B /* NetworkHelper.swift */,
 				C6DDA6A623ABD2EE00F37B9B /* AppError.swift */,
+				C672EF9B23ABD3E8006F7A9B /* ImageViewExt.swift */,
+				C61A237C23ABD49D00F59AF6 /* ShowAlert.swift */,
+				C61A237E23ABD4EC00F59AF6 /* ElementsAPIClient.swift */,
 			);
 			path = "Network Services + Extensions";
 			sourceTree = "<group>";
@@ -188,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C61A237F23ABD4EC00F59AF6 /* ElementsAPIClient.swift in Sources */,
 				C6DDA6A523ABD2E500F37B9B /* NetworkHelper.swift in Sources */,
 				5734756421DA90C700FB6177 /* TableOfElementsController.swift in Sources */,
 				C6DDA6A723ABD2EE00F37B9B /* AppError.swift in Sources */,
@@ -196,6 +206,8 @@
 				C6DDA69A23ABCECD00F37B9B /* ElementCell.swift in Sources */,
 				C6DDA69823ABCEA800F37B9B /* ElementDetailVC.swift in Sources */,
 				C6DDA6A023ABD06900F37B9B /* FavoritesViewController.swift in Sources */,
+				C672EF9C23ABD3E8006F7A9B /* ImageViewExt.swift in Sources */,
+				C61A237D23ABD49D00F59AF6 /* ShowAlert.swift in Sources */,
 				C6DDA69E23ABCF7A00F37B9B /* Element.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,7 +285,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -328,7 +340,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
