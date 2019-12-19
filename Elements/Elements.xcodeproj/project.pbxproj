@@ -17,6 +17,8 @@
 		C6DDA69E23ABCF7A00F37B9B /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DDA69D23ABCF7A00F37B9B /* Element.swift */; };
 		C6DDA6A023ABD06900F37B9B /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DDA69F23ABD06900F37B9B /* FavoritesViewController.swift */; };
 		C6DDA6A223ABD09D00F37B9B /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DDA6A123ABD09D00F37B9B /* FavoriteCell.swift */; };
+		C6DDA6A523ABD2E500F37B9B /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DDA6A423ABD2E500F37B9B /* NetworkHelper.swift */; };
+		C6DDA6A723ABD2EE00F37B9B /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DDA6A623ABD2EE00F37B9B /* AppError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		C6DDA69D23ABCF7A00F37B9B /* Element.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Element.swift; sourceTree = "<group>"; };
 		C6DDA69F23ABD06900F37B9B /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		C6DDA6A123ABD09D00F37B9B /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
+		C6DDA6A423ABD2E500F37B9B /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		C6DDA6A623ABD2EE00F37B9B /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 		5734756021DA90C700FB6177 /* Elements */ = {
 			isa = PBXGroup;
 			children = (
+				C6DDA6A323ABD2BF00F37B9B /* Network Services + Extensions */,
 				C6DDA69C23ABCF6900F37B9B /* Model */,
 				C6DDA69B23ABCF5700F37B9B /* ViewControllers */,
 				5734756521DA90C700FB6177 /* Main.storyboard */,
@@ -101,6 +106,15 @@
 				C6DDA69D23ABCF7A00F37B9B /* Element.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		C6DDA6A323ABD2BF00F37B9B /* Network Services + Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C6DDA6A423ABD2E500F37B9B /* NetworkHelper.swift */,
+				C6DDA6A623ABD2EE00F37B9B /* AppError.swift */,
+			);
+			path = "Network Services + Extensions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,7 +188,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6DDA6A523ABD2E500F37B9B /* NetworkHelper.swift in Sources */,
 				5734756421DA90C700FB6177 /* TableOfElementsController.swift in Sources */,
+				C6DDA6A723ABD2EE00F37B9B /* AppError.swift in Sources */,
 				5734756221DA90C700FB6177 /* AppDelegate.swift in Sources */,
 				C6DDA6A223ABD09D00F37B9B /* FavoriteCell.swift in Sources */,
 				C6DDA69A23ABCECD00F37B9B /* ElementCell.swift in Sources */,
